@@ -1,12 +1,17 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   font-family: Arial, sans-serif;
   font-size: 13px;
   font-weight: 400px;
   line-height: 18px;
   color: #515076;
-  margin: 0;
-  padding: 0;
 }
+
 .title {
   text-align: center;
   line-height: 78px;
@@ -27,11 +32,38 @@ h4 {
 
 .product-header {
   margin-top: 30px;
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
 }
 
 .product-compound {
   margin-left: 0;
   padding-left: 0;
   list-style-position: inside;
+  margin-bottom: 25px;
   list-style-type: circle;
+}
+
+.product-price {
+  display: flex;
+  justify-content: space-between;
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 400;
+}
+
+.price {
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 700;
+}
+
+.product-list {
+  margin-top: 110px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 45px;
+  justify-content: center;
 }
