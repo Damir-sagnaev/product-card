@@ -11,66 +11,31 @@ body {
   font-weight: 400px;
   line-height: 18px;
   color: #515076;
-  width: 1110;
+  margin: 0 auto;
   background-image: url(/images/backround.jpg);
-  background-repeat: repeat;
-  background-position: 200px;
-  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-color: #ffffff;
 }
 
-.title {
+.catalog {
+  padding-top: 220px;
+}
+
+.container {
+  width: 1110px;
+  margin: 0 auto;
+}
+
+.catalog__title {
   text-align: center;
   line-height: 78px;
   font-size: 70px;
   font-weight: 400;
   margin-bottom: 110px;
-  margin-top: 220px;
 }
 
-h4 {
-  font-size: 20px;
-  line-height: 27px;
-}
-
-.product-card {
-  width: 340px;
-  height: auto;
-  padding: 25px;
-  background-color: #f7f7fa;
-}
-
-.product-header {
-  margin-top: 30px;
-  margin-bottom: 15px;
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-}
-
-.product-compound {
-  margin-left: 0;
-  padding-left: 0;
-  list-style-position: inside;
-  margin-bottom: 25px;
-  list-style-type: circle;
-}
-
-.product-price {
-  display: flex;
-  justify-content: space-between;
-  font-size: 20px;
-  line-height: 24px;
-  font-weight: 400;
-}
-
-.price {
-  font-size: 20px;
-  line-height: 24px;
-  font-weight: 700;
-}
-
-.product-list {
-  margin-top: 110px;
+.products {
   display: flex;
   flex-wrap: wrap;
   gap: 45px;
@@ -79,9 +44,65 @@ h4 {
   width: 1110px;
   margin: 0 auto 116px;
 }
+.products__item {
+  width: 340px;
+  height: auto;
+}
 
-.for-normal-skin {
+.card {
+  padding: 25px;
+  background-color: #f7f7fa;
+}
+.card__image {
+  margin-bottom: 30px;
+}
+
+.card__category {
+  margin-bottom: 5px;
+  display: block;
+  color: #a5a3b9;
   font-size: 12px;
   line-height: 24px;
-  color: #a5a3b9;
+  text-transform: uppercase;
+}
+
+.card__name {
+  margin-bottom: 5px;
+}
+
+.card__description {
+  margin-bottom: 15px;
+}
+
+.card__name {
+  font-size: 20px;
+  line-height: 27px;
+}
+
+.card__compound {
+  margin-left: 0;
+  padding-left: 0;
+  list-style-position: inside;
+  margin-bottom: 25px;
+  list-style-type: circle;
+}
+
+.compound__name {
+  margin-bottom: 5px;
+  display: block;
+}
+
+.compound__list {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.card__price {
+  display: flex;
+  justify-content: space-between;
+  margin-top: auto;
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 400;
 }
