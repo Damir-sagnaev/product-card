@@ -106,3 +106,12 @@ body {
   line-height: 24px;
   font-weight: 400;
 }
+
+.btn {
+  font-size: 16px;
+  background-color: red;
+}
+
+.btn.blue {
+  background-color: blue;
+}
