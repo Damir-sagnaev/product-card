@@ -7,11 +7,17 @@ console.log(result);
 
 //3) создание массива строк и поиска элемента
 const phones = ["iPhone", "Xiaomi", "Samsung", "Asus", "Honor"];
-console.log(phones.includes("Samsung"));
+function phoneSearch(phone) {
+  if (typeof phone === "string") {
+    return phones.includes(phone);
+  }
+  return "Некорректные входные данные";
+}
+console.log(phoneSearch("Samsung"));
 
 //4)функция которая переворачивает массив
 function reverse(array) {
-  array.reverse();
+  return array.reverse();
 }
 reverse(phones);
 reverse(numbers);
@@ -31,7 +37,7 @@ const comComments = comments.filter((comment) => {
 console.log(comComments);
 
 //8) перебор массива с помощью forEach
-comments.forEach((comment) => {
+comments.map((comment) => {
   if (comment.id <= 5) {
     comment.postId = 2;
   } else comment.postId = 1;
