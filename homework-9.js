@@ -36,7 +36,7 @@ const comComments = comments.filter((comment) => {
 
 console.log(comComments);
 
-//8) перебор массива с помощью forEach
+//8) перебор массива с помощью map
 comments.map((comment) => {
   if (comment.id <= 5) {
     comment.postId = 2;

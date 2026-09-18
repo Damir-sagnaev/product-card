@@ -50,3 +50,4 @@ const productPay = (budget) => {
 
 productPay(30);
 productPay("text");
+productPay(0);
