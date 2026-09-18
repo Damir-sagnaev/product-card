@@ -1,4 +1,5 @@
 import { products } from "./products.js";
+const PATH = "/images/";
 const cardTemplate = document.getElementById("card-template");
 const productList = document.getElementById("product-list");
 const numberCards = getNumberCards();
@@ -6,7 +7,7 @@ const numberCards = getNumberCards();
 function renderCards(products) {
   products.forEach((product) => {
     const cardClone = cardTemplate.content.cloneNode(true);
-    cardClone.querySelector(".card__image").src = product.image;
+    cardClone.querySelector(".card__image").src = PATH + product.image;
     cardClone.querySelector(".card__name").textContent = product.name;
     cardClone.querySelector(".card__category").textContent = product.category;
     cardClone.querySelector(".card__description").textContent =
@@ -27,8 +28,7 @@ function renderCards(products) {
     productList.appendChild(cardClone);
   });
 }
-if (numberCards >= 1 && numberCards <= 5)
-  renderCards(products.slice(0, numberCards));
+if (numberCards) renderCards(products.slice(0, numberCards));
 
 const namesDescriptions = products.reduce((acc, product) => {
   acc.push({ [product.name]: product.description });
@@ -42,11 +42,8 @@ function getNumberCards() {
   if (answer >= 1 && answer <= 5) {
     return answer;
   }
-  if (isNaN(answer)) {
+  if (isNaN(answer) || answer < 1 || answer > 5) {
     console.log("Некорректные входные данные");
-    return;
-  }
-  if (answer < 1 || answer > 5) {
-    console.log("Некорректные входные данные");
+    return 0;
   }
 }
