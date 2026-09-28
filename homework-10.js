@@ -13,7 +13,7 @@ function renderCards(products) {
     cardClone.querySelector(".card__description").textContent =
       product.description;
     cardClone.querySelector(".card__image").alt = product.alt;
-    cardClone.querySelector(".price__value").textContent = product.price;
+    cardClone.querySelector(".price__value").textContent = `${product.price} ₽`;
 
     const compoundItems = product.compound.map((item) => {
       const li = document.createElement("li");
