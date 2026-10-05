@@ -7,6 +7,97 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <div class="registration">
+      <button class="registration__button">Регистрация</button>
+    </div>
+    <div class="modal">
+      <div class="modal__overlay"></div>
+      <div class="modal__content">
+        <button class="modal__close">×</button>
+        <h2 class="modal__title">Регистрация</h2>
+        <form class="registration-form">
+          <div class="registration-form__group">
+            <label class="registration-form__label" for="first-name">Имя</label>
+
+            <input
+              class="registration-form__input"
+              id="first-name"
+              type="text"
+              placeholder="Введите имя"
+              required
+            />
+          </div>
+          <div class="registration-form__group">
+            <label class="registration-form__label" for="sur-name"
+              >Фамилия</label
+            >
+
+            <input
+              class="registration-form__input"
+              id="sur-name"
+              type="text"
+              placeholder="Введите фамилию"
+              required
+            />
+          </div>
+          <div class="registration-form__group">
+            <label class="registration-form__label" for="birth-date"
+              >Дата рождения</label
+            >
+
+            <input
+              class="registration-form__input"
+              id="birth-date"
+              type="date"
+              required
+            />
+          </div>
+          <div class="registration-form__group">
+            <label class="registration-form__label" for="login">Логин</label>
+
+            <input
+              class="registration-form__input"
+              id="login"
+              type="text"
+              placeholder="Придумайте логин"
+              required
+            />
+          </div>
+          <div class="registration-form__group">
+            <label class="registration-form__label" for="password"
+              >Пароль</label
+            >
+
+            <input
+              class="registration-form__input"
+              id="password"
+              type="password"
+              placeholder="Минимум 6 символов"
+              minlength="6"
+              required
+            />
+          </div>
+          <div class="registration-form__group">
+            <label class="registration-form__label" for="repeat-password"
+              >Повторение пароля</label
+            >
+
+            <input
+              class="registration-form__input"
+              id="repeat-password"
+              type="password"
+              placeholder="Повторите Пароль"
+              minlength="6"
+              required
+            />
+          </div>
+          <button class="registration-form__button" type="submit">
+            Зарегистрироваться
+          </button>
+        </form>
+      </div>
+    </div>
+
     <main class="catalog">
       <div class="catalog__container container">
         <h1 class="catalog__title">Выбери свой продукт</h1>
@@ -38,10 +129,56 @@
         <ul id="product-list" class="products"></ul>
       </div>
     </main>
+
+    <footer class="footer">
+      <div class="footer__container">
+        <div class="footer__intro">
+          <h3 class="intro__title">Product Cards</h3>
+          <p class="intro__description">
+            У нас самые лучшие продукты для кожи!
+          </p>
+          <div class="footer__socials">
+            <a href="#" class="footer__social-link">
+              <img src="images/telegram.png" alt="Telegram" />
+            </a>
+            <a href="#" class="footer__social-link">
+              <img src="images/vk.png" alt="Вконтакте" />
+            </a>
+          </div>
+        </div>
+        <form class="footer__form">
+          <h3 class="form__title">Подпишись на наши акции:</h3>
+          <div class="input__group">
+            <input
+              id="email"
+              class="footer__input"
+              type="email"
+              required
+              placeholder="Введи Email..."
+            />
+            <button class="footer__button" type="submit">Подписаться</button>
+          </div>
+        </form>
+        <nav class="footer__nav">
+          <h3 class="nav__title">Быстрые ссылки</h3>
+          <div class="footer__nav-list">
+            <a href="#" class="footer__nav-link">Главная</a>
+            <a href="#" class="footer__nav-link">Магазин</a>
+            <a href="#" class="footer__nav-link">Контакты</a>
+          </div>
+        </nav>
+      </div>
+      <div class="footer__bottom">
+        <hr class="footer__divider" />
+        <p class="footer__copyright">www.product-cards.com©all right reserve</p>
+      </div>
+    </footer>
+
     <script src="main.js"></script>
     <script src="homework-7.js"></script>
     <script src="homework-8.js"></script>
     <script src="homework-9.js" type="module"></script>
     <script src="homework-10.js" type="module"></script>
+    <script src="homework-11.js" type="module"></script>
   </body>
 </html>
