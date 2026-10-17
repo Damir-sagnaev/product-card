@@ -1,56 +1,50 @@
+import { Modal } from "./Modal.js";
+import { Form } from "./Form.js";
 // добавил логику к футеру
-const form = document.querySelector(".footer__form");
-const email = document.querySelector("#email");
-form.addEventListener("submit", (event) => {
+const footerForm = new Form("footer-form");
+
+footerForm.form.addEventListener("submit", (event) => {
   event.preventDefault();
+  const formValues = footerForm.getValues();
   console.log({
-    email: email.value,
+    email: formValues.email,
   });
+  footerForm.reset();
 });
 // открытие модалки при клике на кнопку регистрация
 const registrationButton = document.querySelector(".registration__button");
-const modal = document.querySelector(".modal");
+const registrationModal = new Modal("modal-main");
 
 registrationButton.addEventListener("click", () => {
-  modal.classList.add("modal-showed");
-});
-// закрытие модалки при нажатии на крестик
-const modalClose = document.querySelector(".modal__close");
-
-modalClose.addEventListener("click", () => {
-  modal.classList.remove("modal-showed");
+  registrationModal.open();
 });
 
 // добавление валидации
-const registrationForm = document.querySelector(".registration-form");
-const firstName = document.querySelector("#first-name");
-const surName = document.querySelector("#sur-name");
-const birthDate = document.querySelector("#birth-date");
-const login = document.querySelector("#login");
-const password = document.querySelector("#password");
-const repeatPassword = document.querySelector("#repeat-password");
+const registrationForm = new Form("registration-form");
 let user;
 
-registrationForm.addEventListener("submit", (event) => {
+registrationForm.form.addEventListener("submit", (event) => {
   event.preventDefault();
 
-  if (!registrationForm.checkValidity()) {
+  if (!registrationForm.isValid()) {
     alert("Регистрация отклонена");
     return;
   }
+  const formValues = registrationForm.getValues();
 
-  if (password.value !== repeatPassword.value) {
+  if (formValues.password !== formValues["repeat-password"]) {
     alert("Пароли не совпадают");
     return;
   }
   user = {
-    firstName: firstName.value,
-    surName: surName.value,
-    birthDate: birthDate.value,
-    login: login.value,
-    password: password.value,
+    firstName: formValues["first-name"],
+    surName: formValues["sur-name"],
+    birthDate: formValues["birth-date"],
+    login: formValues.login,
+    password: formValues.password,
     createdOn: new Date(),
   };
   console.log(user);
-  modal.classList.remove("modal-showed");
+  registrationForm.reset();
+  registrationModal.close();
 });

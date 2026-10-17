@@ -10,18 +10,19 @@
     <div class="registration">
       <button class="registration__button">Регистрация</button>
     </div>
-    <div class="modal">
+    <div class="modal" id="modal-main">
       <div class="modal__overlay"></div>
       <div class="modal__content">
         <button class="modal__close">×</button>
         <h2 class="modal__title">Регистрация</h2>
-        <form class="registration-form">
+        <form class="registration-form" id="registration-form">
           <div class="registration-form__group">
             <label class="registration-form__label" for="first-name">Имя</label>
 
             <input
               class="registration-form__input"
               id="first-name"
+              name="first-name"
               type="text"
               placeholder="Введите имя"
               required
@@ -35,6 +36,7 @@
             <input
               class="registration-form__input"
               id="sur-name"
+              name="sur-name"
               type="text"
               placeholder="Введите фамилию"
               required
@@ -48,6 +50,7 @@
             <input
               class="registration-form__input"
               id="birth-date"
+              name="birth-date"
               type="date"
               required
             />
@@ -58,6 +61,7 @@
             <input
               class="registration-form__input"
               id="login"
+              name="login"
               type="text"
               placeholder="Придумайте логин"
               required
@@ -71,6 +75,7 @@
             <input
               class="registration-form__input"
               id="password"
+              name="password"
               type="password"
               placeholder="Минимум 6 символов"
               minlength="6"
@@ -85,6 +90,7 @@
             <input
               class="registration-form__input"
               id="repeat-password"
+              name="repeat-password"
               type="password"
               placeholder="Повторите Пароль"
               minlength="6"
@@ -146,11 +152,12 @@
             </a>
           </div>
         </div>
-        <form class="footer__form">
+        <form class="footer__form" id="footer-form">
           <h3 class="form__title">Подпишись на наши акции:</h3>
           <div class="input__group">
             <input
               id="email"
+              name="email"
               class="footer__input"
               type="email"
               required
@@ -174,11 +181,6 @@
       </div>
     </footer>
 
-    <script src="main.js"></script>
-    <script src="homework-7.js"></script>
-    <script src="homework-8.js"></script>
-    <script src="homework-9.js" type="module"></script>
-    <script src="homework-10.js" type="module"></script>
-    <script src="homework-11.js" type="module"></script>
+    <script src="main.js" type="module"></script>
   </body>
 </html>
